@@ -160,7 +160,7 @@ const Dashboard = () => {
     setIsLoading(true);
 
     try {
-      const queryUrl = `${baseUrl}/webhook/query`;
+      const queryUrl = `${baseUrl}/webhook/6eef3f01-48df-4509-bfae-fbb734832efe`;
       console.log('Making API request to:', queryUrl);
 
       const response = await fetch(queryUrl, {
