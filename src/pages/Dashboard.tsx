@@ -34,7 +34,7 @@ const Dashboard = () => {
   const { showNotification } = useNotification();
 
   const baseUrl = 'https://elrigsaa.app.n8n.cloud';
-  const uploadPath = 'webhook/4a1aa02f-a42f-4d73-a005-f11ae74959d6';
+  const uploadPath = 'webhook/6b848a88-eaa9-4ac3-ac16-bbc5be18572a';
 
   useEffect(() => {
     if (queryInputRef.current) {
