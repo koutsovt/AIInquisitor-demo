@@ -75,7 +75,7 @@ const Dashboard = () => {
 
   const handleFiles = async (files: File[]) => {
     const allowedTypes = ['application/pdf', 'text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    const maxFileSize = 10 * 1024 * 1024; // 10MB
+    const maxFileSize = 50 * 1024 * 1024; // Increased to 50MB
 
     for (const file of files) {
       if (!allowedTypes.includes(file.type)) {
@@ -84,7 +84,7 @@ const Dashboard = () => {
       }
 
       if (file.size > maxFileSize) {
-        showNotification(`File too large: ${file.name} (max 10MB)`, 'error');
+        showNotification(`File too large: ${file.name} (max 50MB)`, 'error');
         continue;
       }
 
