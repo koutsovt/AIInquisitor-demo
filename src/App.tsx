@@ -27,7 +27,7 @@ function App() {
           <NotificationProvider>
             <Routes>
               <Route path="/" element={<Layout><Login /></Layout>} />
-              <Route path="/auth/callback" element={<Navigate to="/dashboard" replace />} />
+              <Route path="/auth/callback" element={<Navigate to="/dashboard\" replace />} />
               <Route 
                 path="/dashboard" 
                 element={
