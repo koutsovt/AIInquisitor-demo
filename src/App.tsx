@@ -18,7 +18,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 function App() {
-  const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
+  const googleClientId = '661157021532-8gpcocl6qfni73rmu9btqsl7lpabpuh4.apps.googleusercontent.com';
 
   return (
     <GoogleOAuthProvider clientId={googleClientId}>
@@ -46,4 +46,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
