@@ -9,6 +9,7 @@ export default defineConfig({
   envPrefix: 'VITE_',
   build: {
     sourcemap: true,
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -17,4 +18,8 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    port: 3000,
+    host: true
+  }
 });
