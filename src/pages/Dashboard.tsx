@@ -100,7 +100,7 @@ const Dashboard = () => {
 
       try {
         const formData = new FormData();
-        formData.append('data', file); // Changed from 'file' to 'data'
+        formData.append('data', file);
 
         const uploadUrl = `${baseUrl}/${uploadPath}`;
         console.log('Making upload request to:', uploadUrl);
@@ -108,7 +108,10 @@ const Dashboard = () => {
         const response = await fetch(uploadUrl, {
           method: 'POST',
           headers: {
-            'Accept': '*/*'
+            'Accept': '*/*',
+            // Note: Don't set Content-Type header when using FormData
+            // The browser will automatically set the correct multipart/form-data
+            // boundary and Content-Type header
           },
           body: formData
         });
