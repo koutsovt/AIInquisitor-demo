@@ -75,7 +75,7 @@ const Dashboard = () => {
 
   const handleFiles = async (files: File[]) => {
     const allowedTypes = ['application/pdf', 'text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    const maxFileSize = 50 * 1024 * 1024; // Increased to 50MB
+    const maxFileSize = 50 * 1024 * 1024; // 50MB
 
     for (const file of files) {
       if (!allowedTypes.includes(file.type)) {
@@ -107,12 +107,6 @@ const Dashboard = () => {
 
         const response = await fetch(uploadUrl, {
           method: 'POST',
-          headers: {
-            'Accept': '*/*',
-            // Note: Don't set Content-Type header when using FormData
-            // The browser will automatically set the correct multipart/form-data
-            // boundary and Content-Type header
-          },
           body: formData
         });
 
