@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  VITE_GOOGLE_CLIENT_ID = "661157021532-8gpcocl6qfni73rmu9btqsl7lpabpuh4.apps.googleusercontent.com"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
