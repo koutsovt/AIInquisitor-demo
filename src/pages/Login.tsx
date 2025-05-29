@@ -93,7 +93,7 @@ const Login = () => {
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="bg-gradient-to-r from-slate-900 to-blue-900 px-6 py-8 text-white">
           <div className="flex justify-center mb-6">
-            <Logo variant="light" />
+            <Logo />
           </div>
           <h1 className="text-3xl font-bold text-center">Welcome Back</h1>
           <p className="text-center opacity-90 mt-2">Sign in to access your documents</p>
