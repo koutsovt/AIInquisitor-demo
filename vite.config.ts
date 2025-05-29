@@ -7,4 +7,14 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   envPrefix: 'VITE_',
+  build: {
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
+  },
 });
